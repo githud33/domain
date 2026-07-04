@@ -1,5 +1,5 @@
 // 1. ตั้งค่าโดเมนส่วนกลางที่จุดเดียวเหมือนเดิม
-var myDomain = "https://hugh.cdn.rumble.cloud/video/"; // ใช้ชื่อ myDomain
+var myDomain = "https://1a-1791.com/video/"; // ใช้ชื่อ myDomain
 
 (function() {
     var sourceTag = document.getElementById('mp'); // ใช้ชื่อ sourceTag
