@@ -7,11 +7,11 @@
         },
         video: {
             old: "https://raw.githubusercontent.com/de077/Series/refs/heads/main/",
-            new: "https://cdn.jsdelivr.net/gh/de077/Series@main/" // 🚨 ปรับตามสเปก jsDelivr ให้แล้วครับ
+            new: "https://cdn.jsdelivr.net/gh/de077/Series@main/"
         },
         subtitle: {
             old: "https://raw.githubusercontent.com/de077/subtitle/refs/heads/main/",
-            new: "https://cdn.jsdelivr.net/gh/de077/subtitle@main/" // 🚨 ปรับตามสเปก jsDelivr ให้แล้วครับ
+            new: "https://cdn.jsdelivr.net/gh/de077/subtitle@main/"
         }
     };
 
@@ -47,7 +47,7 @@
             if (dp) video.setAttribute('data-poster', convertUrl(dp));
             if (s) {
                 video.setAttribute('src', convertUrl(s));
-                if (typeof video.load === 'function') video.load();
+                // 🚨 เอา video.load() ออกเพื่อความปลอดภัย
             }
         });
 
@@ -56,8 +56,7 @@
             var s = source.getAttribute('src');
             if (s) {
                 source.setAttribute('src', convertUrl(s));
-                var parent = source.parentElement;
-                if (parent && typeof parent.load === 'function') parent.load();
+                // 🚨 เอา parent.load() ออก เพื่อแก้ปัญหาวิดีโอค้าง วนลูปไม่สิ้นสุด
             }
         });
 
@@ -72,7 +71,5 @@
             var s = img.getAttribute('src');
             if (s) img.setAttribute('src', convertUrl(s));
         });
-
-        console.log("🤖 [นายช่าง] สับเปลี่ยนโดเมนแยกคลัง ภาพ/วิดีโอ/ซับ เป็น jsDelivr ให้เรียบร้อยครบถ้วนครับพี่!");
     });
 })();
