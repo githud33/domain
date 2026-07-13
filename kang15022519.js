@@ -1,4 +1,8 @@
+//  พิมพ์ purge แทนตัว cdn เพื่อล้างแค้น https://purge.jsdelivr.net/
 // 1. ตั้งค่าโดเมนส่วนกลางสำหรับ video ที่จุดเดียวเหมือนเดิม
+//   ใช้โดเมนตัวใดตัวหนึ่งแทนกันได้
+//  https://cdn.jsdelivr.net/gh/kang1502/Series@main/
+//  https://kang1502.github.io/Series/
 var myDomain = "https://kang1502.github.io/Series/"; 
 
 (function() {
@@ -8,9 +12,12 @@ var myDomain = "https://kang1502.github.io/Series/";
         sourceTag.src = myDomain + currentFile;
     }
 })();
-
+//  พิมพ์ purge แทนตัว cdn เพื่อล้างแค้น https://purge.jsdelivr.net/
 // ตั้งค่าโดเมนส่วนกลางสำหรับเก็บซับไตเติล (เวลาโดเมนเปลี่ยน มาแก้ตรงนี้ที่เดียวจบ!)
-var subDomain = "https://kang1502.github.io/subtitle/";
+//   ใช้โดเมนตัวใดตัวหนึ่งแทนกันได้
+//  https://cdn.jsdelivr.net/gh/kang1502/subtitle@main/
+//  https://kang1502.github.io/subtitle/
+var subDomain = "https://cdn.jsdelivr.net/gh/kang1502/subtitle@main/";
 
 (function() {
     var trackTags = document.querySelectorAll('track');
