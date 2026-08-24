@@ -1,7 +1,7 @@
 // 1. ตั้งค่าโดเมนส่วนกลางสำหรับ video ที่จุดเดียวเหมือนเดิม
 //   https://cdn.jsdelivr.net/gh/de077/Series@main/
 //   https://de077.github.io/Series/
-var myDomain = "https://cdn.jsdelivr.net/gh/de077/Series@main/"; 
+var myDomain = "https://cdn.jsdelivr.net/gh/de077/Series/"; 
 
 (function() {
     var sourceTag = document.getElementById('m3'); 
