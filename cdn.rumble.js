@@ -39,3 +39,19 @@ var myDomain = "https://hugh.cdn.rumble.cloud/video/"; // ใช้ชื่อ 
         sourceTag.src = myDomain + currentFile;
     }
 })();
+
+
+// =============================================================================
+// =============================================================================
+// แท็ก class
+(function() {
+    var myDomain = "https://hugh.cdn.rumble.cloud/video/";
+    var sources = document.querySelectorAll('source.mp');
+    
+    sources.forEach(function(sourceTag) {
+        var currentFile = sourceTag.getAttribute('src');
+        if (currentFile && !currentFile.startsWith('http')) {
+            sourceTag.src = myDomain + currentFile;
+        }
+    });
+})();
