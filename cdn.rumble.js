@@ -43,10 +43,25 @@ var myDomain = "https://hugh.cdn.rumble.cloud/video/"; // ใช้ชื่อ 
 
 // =============================================================================
 // =============================================================================
-// แท็ก class
+// แท็ก class="mp"
 (function() {
     var myDomain = "https://hugh.cdn.rumble.cloud/video/";
     var sources = document.querySelectorAll('source.mp');
+    
+    sources.forEach(function(sourceTag) {
+        var currentFile = sourceTag.getAttribute('src');
+        if (currentFile && !currentFile.startsWith('http')) {
+            sourceTag.src = myDomain + currentFile;
+        }
+    });
+})();
+
+// =============================================================================
+// =============================================================================
+// แท็ก class="mp4"
+(function() {
+    var myDomain = "https://hugh.cdn.rumble.cloud/video/";
+    var sources = document.querySelectorAll('source.mp4');
     
     sources.forEach(function(sourceTag) {
         var currentFile = sourceTag.getAttribute('src');
