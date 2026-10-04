@@ -3,6 +3,7 @@
 //   ใช้โดเมนตัวใดตัวหนึ่งแทนกันได้
 //  https://cdn.jsdelivr.net/gh/kang1502/Series@main/
 //  https://kang1502.github.io/Series/
+// 🎦 id="m3"
 var myDomain = "https://cdn.jsdelivr.net/gh/kang1502/Series@main/"; 
 
 (function() {
@@ -12,6 +13,20 @@ var myDomain = "https://cdn.jsdelivr.net/gh/kang1502/Series@main/";
         sourceTag.src = myDomain + currentFile;
     }
 })();
+// ==========================================================================
+// 📛🎦แท็ก class="m3" 
+(function() {
+    var myDomain = "https://hugh.cdn.rumble.cloud/video/";
+    var sources = document.querySelectorAll('source.m3');
+    
+    sources.forEach(function(sourceTag) {
+        var currentFile = sourceTag.getAttribute('src');
+        if (currentFile && !currentFile.startsWith('http')) {
+            sourceTag.src = myDomain + currentFile;
+        }
+    });
+})();
+
 /*ปิด
 // ==========================================================================
 // ==========================================================================
